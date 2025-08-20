@@ -29,8 +29,25 @@ int make_range_of_primes(){
     }
 }
 
-int main(int argc, char const *argv[])
-{
-    /* code */
+int main(){
+    int input;
+    while(true){
+        cout << "Please select an option:";
+        cout << "(1) Check for a prime number.";
+        cout << "(2) Make a range of prime numbers.";
+        cout << "Please input your option";
+        cin >> input;
+
+        if(input == 1){
+            check_if_prime();
+        } else if(input == 2){
+            make_range_of_primes();
+        } else if(input == 3){
+            break;
+        } else{
+            cout << "invaild option";
+        }
+    }
+
     return 0;
 }
