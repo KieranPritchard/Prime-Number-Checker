@@ -3,26 +3,48 @@
 
 using namespace std;
 
-int check_if_prime(){
+bool is_prime_number(int number){
+    int counter = 0;
+    
+    if(number <= 1){
+        return false;
+    } else{
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0)
+                counter++;
+        }
+        if (counter > 2){
+            return false; 
+        } else{
+            return true;
+        }
+    }
+}
+
+void check_if_prime(){
     int input;
     cout << "Please input your number for checking: ";
     cin >> input;
 
-    if(input == input % input && input % 1){
+    bool is_number_prime = is_prime_number(input);
+
+    if(is_number_prime = true){
         cout << "Your number is a prime number.";
     } else {
         cout << "Your number is not a prime number.";
     }
 }
 
-int make_range_of_primes(){
+void make_range_of_primes(){
     int input;
     cout << "Please input your number for checking: ";
     cin >> input;
 
     for(int i; i < input; i++){
-        if(i == i % i && i % 1){
-            cout << i << endl;
+        bool is_number_prime = is_prime_number(input);
+
+        if(is_number_prime == true){
+            cout << input;
         } else{
             continue;
         }
