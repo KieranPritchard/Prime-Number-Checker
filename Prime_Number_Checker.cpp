@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <string>
 
 using namespace std;
 
@@ -23,28 +24,29 @@ bool is_prime_number(int number){
 
 void check_if_prime(){
     int input;
-    cout << "Please input your number for checking: ";
+    cout << "Please input your number for checking: " << endl;
     cin >> input;
 
     bool is_number_prime = is_prime_number(input);
 
-    if(is_number_prime = true){
-        cout << "Your number is a prime number.";
+    if(is_number_prime == true){
+        cout << "Your number is a prime number." << endl;
     } else {
-        cout << "Your number is not a prime number.";
+        cout << "Your number is not a prime number." << endl;
     }
 }
 
 void make_range_of_primes(){
     int input;
-    cout << "Please input your number for checking: ";
+    cout << "Please input your number for highest in range: " << endl;
     cin >> input;
+    cout << string(30, '=') << endl;
 
-    for(int i; i < input; i++){
-        bool is_number_prime = is_prime_number(input);
+    for(int i=0; i != input; i++){
+        bool is_number_prime = is_prime_number(i);
 
         if(is_number_prime == true){
-            cout << input;
+            cout << i << endl;
         } else{
             continue;
         }
@@ -53,12 +55,19 @@ void make_range_of_primes(){
 
 int main(){
     int input;
+
+    cout << string(30, '=') << endl;
+    cout << "Prime Number Checker" << endl;
+
     while(true){
-        cout << "Please select an option:";
-        cout << "(1) Check for a prime number.";
-        cout << "(2) Make a range of prime numbers.";
-        cout << "Please input your option";
+        cout << string(30, '=') << endl;
+        cout << "Please select an option:" << endl;
+        cout << "(1) Check for a prime number." << endl;
+        cout << "(2) Make a range of prime numbers." << endl;
+        cout << "(3) Quit" << endl;
+        cout << "Please input your option: ";
         cin >> input;
+        cout << string(30, '=') << endl;
 
         if(input == 1){
             check_if_prime();
@@ -67,7 +76,7 @@ int main(){
         } else if(input == 3){
             break;
         } else{
-            cout << "invaild option";
+            cout << "Invaild option." << endl;
         }
     }
 
