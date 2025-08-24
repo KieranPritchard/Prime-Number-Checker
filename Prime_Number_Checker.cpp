@@ -36,22 +36,23 @@ void check_if_prime(){
     }
 }
 
-void make_range_of_primes(){
+void make_range_of_primes() {
     int input;
-    cout << "Please input your number for highest in range: " << endl;
+    cout << "Please input your number for highest in range: ";
     cin >> input;
     cout << string(30, '=') << endl;
 
-    for(int i=0; i != input; i++){
-        bool is_number_prime = is_prime_number(i);
-
-        if(is_number_prime == true){
-            cout << i << endl;
-        } else{
-            continue;
+    bool first = true;
+    for (int i = 2; i <= input; i++) {
+        if (is_prime_number(i)) {
+            if (!first) cout << ", ";
+            cout << i;
+            first = false;
         }
     }
+    cout << endl;
 }
+
 
 int main(){
     int input;
