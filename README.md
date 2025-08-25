@@ -46,26 +46,26 @@ This project helped reinforce understanding of loops, conditionals, functions, a
 
 ### 1. Clone the repository
 ```
-git clone <REPO_URL>
-cd <PROJECT_FOLDER>
+git clone https://github.com/KieranPritchard/Prime-Number-Checker/
+cd Prime-Number-Checker
 ```
 ### 2. Make the compile script executable
 ```
-chmod +x compile.sh
+chmod +x build.sh
 ```
 ### 3. Compile the program
 * Use the provided script to compile the code:
 ```
-./build.sh main.cpp
+./build.sh Prime_Number_Checker.cpp
 ```
 * This will generate an executable named main.exe.
 * (If you prefer manual compilation:)
 ```
-g++ main.cpp -o prime_checker
+g++ Prime_Number_Checker.cpp -o Prime_Number_Checker.exe
 ```
 ### 4. Run the program
 ```
-./main.exe
+./Prime_Number_Checker.exe
 ```
 ### 5. Choose an option from the menu
 * (1) Check if a number is prime
@@ -74,3 +74,4 @@ g++ main.cpp -o prime_checker
 
 ## Licenses
 License can be found in the root of the repository.
+
